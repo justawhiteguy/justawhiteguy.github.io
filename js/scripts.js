@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
   $("body")
     .on("input propertychange", ".form-item", function(e) {
       $(this).toggleClass("form-item-filled", !!$(e.target).val());
