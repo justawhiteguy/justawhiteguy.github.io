@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header class="navbar navbar-default">
+      <nav id="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><p style="font-family:'Indie Flower';font-size:50px;">My Portfolio</p></a>
+          </div>
+          <div class="navbar navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#about-me">About Me</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="about-me">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>My name is John. The last two years I have spent building applications on the Appian Platform. I have become more
+             interested in the &quotreal&quot side of coding. I have familiarity with Java, Perl, and SQL but am looking to
+             expand and deepen my knowledge of the languages familiar to me as well as additional languages. This is my first pass
+             at getting into HTML5, CSS3, and Javascript. Wish me luck as I attempt to evolve with the times.</p>
+        </div>
+        <hr/>
+      </section>
+      <section id="portfolio">
+        <div class="container">
+          <h2>Portfolio</h2>
+          <p>To be completed. As I'm beginning to work on projects, they will be added to this section.</p>
+        </div>
+        <hr>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <form>
+            <div class="form-item">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Name"/>
+            </div>
+            <div class="form-item">
+              <label for="email">Email Address</label>
+              <input id="email" type="text" name="email" placeholder="Email Address"/>
+            </div>
+            <div class="form-item">
+              <label for="phone">Phone Number</label>
+              <input id="phone" type="text" name="phone" placeholder="Phone Number"/>
+            </div>
+            <div class="form-item">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Message"></textarea>
+            </div>
+            <br/>
+            <button class="btn btn-default" type="submit">Send</button>
+          </form>
+        </div>
+        <hr>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p style="text-align:center">Find me on social media</p>
+        <ul style="text-align:center; padding:0;">
+          <li style="display:inline"><a href="https://www.linkedin.com/in/john-mackenzie-04517125" target="_blank" class="button social"><i class="fa fa-fw fa-linkedin"></i></a></li>
+          <li style="display:inline"><a href="https://github.com/justawhiteguy" target="_blank" class="button social"><i class="fa fa-fw fa-github"></i></a></li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <p style="text-align:center;">Created by John MacKenzie &copy; 2016</p>
+      </div>
+    </footer>
+  </body>
+</html>

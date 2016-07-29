@@ -1,0 +1,39 @@
+.form-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bbb;
+}
+
+.form-item input, .form-item textarea {
+  position: relative;
+  box-shadow: none!important;
+  resize: none;
+  width: 100%;
+  border: 0;
+}
+
+.form-item label{
+  display:block;
+  z-index:0;
+  position:relative;
+  top:2em;
+  margin:0;
+  vertical-align:middle;
+  vertical-align:baseline;
+  opacity:0;
+  -webkit-transition:top .3s ease,opacity .3s ease;transition:top .3s ease,opacity .3s ease;
+}
+
+.form-item input:focus, .form-item textarea:focus{
+  outline:0;
+}
+
+.form-item-filled label{
+  top:0;
+  opacity:1;
+  color:#000000;
+}
+.form-item-focused label{
+  color:#000000;
+}
