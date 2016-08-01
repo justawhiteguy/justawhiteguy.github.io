@@ -12,6 +12,13 @@ $(document).ready(function() {
   });
 });
 */
+$(document).ready(function() {
+  getQuote();
+
+  $("#generate").click(function() {
+    getQuote();
+  });
+});
 
 function getQuote() {
   $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?",function(data) {
@@ -26,11 +33,3 @@ function getQuote() {
     $("#tweet").attr("href","https://twitter.com/intent/tweet?text=" + encodeURI(data.quoteText + author));
   });
 }
-
-$(document).ready(function() {
-  getQuote();
-
-  $("#generate").click(function() {
-    getQuote();
-  });
-});
