@@ -37,3 +37,7 @@
 .form-item-focused label{
   color:#000000;
 }
+
+#about-me {
+  height: 250px;
+}
