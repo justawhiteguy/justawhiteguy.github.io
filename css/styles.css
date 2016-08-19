@@ -39,5 +39,15 @@
 }
 
 #about-me {
-  height: 250px;
+  height: 50%;
+  /*background: linear-gradient(red,white);*/
+}
+
+#portfolio {
+  /*background: linear-gradient(white,blue);*/
+}
+
+.navbar-brand {
+  font-family:'Indie Flower';
+  font-size: 4em;
 }
