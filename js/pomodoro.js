@@ -31,8 +31,8 @@ function formatTime(time) {
 function countdown() {
   if(sessionTime < 0) {
     if(breakTime === 0) {
-      sessionTime = sessionLength;
-      breakTime = breakLength;
+      sessionTime = sessionLength * 60;
+      breakTime = breakLength * 60;
       formatTime(sessionTime);
       displayPomodoro();
     } else {
@@ -70,12 +70,14 @@ function changeBreak() {
   $('#bminus').click(function() {
     if(breakLength > 1) {
       breakLength -= 1;
+      breakTime = breakLength * 60;
       $('#btime').html(breakLength);
     }
   });
   $('#bplus').click(function() {
     if(breakLength < 59) {
       breakLength += 1;
+      breakTime = breakLength * 60;
       $('#btime').html(breakLength);
     }
   });
