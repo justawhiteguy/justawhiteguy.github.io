@@ -108,6 +108,7 @@ function reset() {
   breakTime = breakLength * 60;
   formatTime(sessionTime);
   start = false;
+  document.getElementById('settings').style.pointerEvents = 'auto';
   displayPomodoro();
 }
 
