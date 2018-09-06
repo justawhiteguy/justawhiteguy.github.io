@@ -14,8 +14,6 @@ $(document).ready(function() {
         if(clean.length < 41) {
             return inp;
         } else {
-            /* TODO: Figure out how to prevent history from slipping to next line */
-            //return '...' + (inp.split(" ")).slice(inp.indexOf(' '),inp.length - 1).join();
             var trunc = clean.slice(-37);
             return '...' + trunc.slice(trunc.indexOf(' ')).replace(/x/g, "&times;").replace(/\//g, "&divide;");
         }
