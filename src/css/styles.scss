@@ -1,0 +1,115 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/brands.css");
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css");
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+$font-indie-flower: Indie Flower, cursive;
+
+$color-twitter-blue: #1da1f2;
+$color-black: #000;
+$color-white: #fff;
+$color-orange: #e57200;
+$color-navy: #232d4b;
+
+html {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 100px;
+}
+
+.card {
+    height: 100%;
+}
+
+.card.link {
+    text-decoration: none;
+    color: $color-black;
+}
+
+.btn.btn-twitter {
+    color: $color-white;
+    background-color: $color-twitter-blue;
+    &:hover {
+        background-color: darken($color: $color-twitter-blue, $amount: 20);
+    }
+}
+
+.btn.btn-quote {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    width: 250px;
+}
+
+.quote-title {
+    color: $color-twitter-blue;
+    font-family: $font-indie-flower;
+    font-weight: bold;
+}
+
+.bg-orange {
+    background-color: $color-orange;
+}
+
+.bg-navy {
+    background-color: $color-navy;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 90px;
+    line-height: 40px;
+    width: 100%;
+    padding: 5px;
+    overflow: hidden;
+    ul {
+        padding: 0;
+    }
+    li {
+        display: inline;
+        padding: 0 5px;
+    }
+    a {
+        text-decoration: none;
+    }
+    color: $color-white;
+}
+
+.fa-linkedin {
+    color: #0077b5;
+    &:hover {
+        color: darken($color: #0077b5, $amount: 10)
+    }
+}
+
+.fa-github {
+    color: #4078c0;
+    &:hover {
+        color: darken($color: #4078c0, $amount: 20)
+    }
+}
+
+.btn-portfolio {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 5px 0;
+    
+}
+
+@media only screen and (max-width: 991px) {
+    h3 {
+        font-size: $h3-font-size * 0.75;
+    }
+}
+
+.weather-location {
+    color: $color-white;
+}
+
+.weather-temperature {
+    font-size: 1.25rem;
+}
