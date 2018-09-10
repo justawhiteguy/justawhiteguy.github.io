@@ -7,6 +7,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Quotes from './Quotes';
 import Weather from './Weather';
+import Wiki from './Wiki';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/quotes" component={Quotes} />
               <Route path="/weather" component={Weather} />
+              <Route path="/wiki-viewer" component={Wiki} />
             </Switch>
           </div>
         </BrowserRouter>

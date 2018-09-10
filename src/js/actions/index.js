@@ -1,8 +1,10 @@
 import axios from 'axios';
+import _$ from 'jquery';
 
 import { 
   FETCH_QUOTE,
   FETCH_WEATHER,
+  FETCH_WIKI,
 } from './types';
 
 export const fetchQuote = () => async dispatch => {
@@ -25,16 +27,42 @@ export const fetchWeather = () => async dispatch => {
     });
   }
 
-  // let res = {};
+  let res = {};
+  if (coords) {
+    res = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
+      params: {
+        lat: coords.lat,
+        lon: coords.lon,
+        units: 'imperial',
+        appid: '9c6ae69be4e5e88ee8d1066a05d9fd8f',
+      }
+    });
+  } else {
+    res = { message: "Location could not be determined"};
+  }
+  dispatch({ type: FETCH_WEATHER, payload: res.data });
+}
 
-  const res = await axios.get('http://api.openweathermap.org/data/2.5/weather', {
-    params: {
-      lat: coords.lat,
-      lon: coords.lon,
-      units: 'imperial',
-      appid: '9c6ae69be4e5e88ee8d1066a05d9fd8f',
-    }
+export const fetchWiki = searchTerm => async dispatch => {
+  const res = await _$.ajax({
+    url: `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}`,
+    dataType: 'jsonp'
   });
 
-  dispatch({ type: FETCH_WEATHER, payload: res.data });
+  let payload = {
+    searchTerm: null,
+    data: []
+  };
+  if (res) {
+    payload.searchTerm = res[0];
+    for (let i = 0; i < res[1].length; i++) {
+      payload.data.push({
+        title: res[1][i],
+        preview: res[2][i],
+        url: res[3][i]
+      });
+    }
+  }
+
+  dispatch({ type: FETCH_WIKI, payload: payload });
 }
