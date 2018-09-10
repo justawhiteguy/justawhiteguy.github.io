@@ -48,8 +48,8 @@ class Wiki extends Component {
     return (
       <div className="container text-center">
         <h1>Search Wikipedia</h1>
-        <div>
-          <input type="text" name="searchTerm" value={this.state.searchTerm} onChange={this.handleChange} placeholder="Enter Search Term" />
+        <div className="form-group">
+          <input className="form-control wiki-search" type="text" name="searchTerm" value={this.state.searchTerm} onChange={this.handleChange} placeholder="Enter Search Term" />
         </div>
         <div>
           <button className="btn btn-success btn-search" onClick={this.handleSearch}>Search</button>
