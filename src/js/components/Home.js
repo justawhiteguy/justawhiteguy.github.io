@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import quoteImg from '../../assets/quote-generator.png';
 import weatherImg from '../../assets/weather-app.png';
+import wikiImg from '../../assets/wiki-viewer.png';
 
 class Home extends Component {
   render() {
@@ -19,19 +20,28 @@ class Home extends Component {
         </div>
         <div>
           <h2>Portfolio</h2>
-          <div className="row">
-            <div className="col-md-6">
+          <div className="row portfolio-row">
+            <div className="col-lg-6 col-portfolio">
               <Link to="/quotes" className="btn btn-light btn-portfolio">
                 <h3>Random Quote Generator</h3>
                 <img src={quoteImg} width={`100%`} />
               </Link>
             </div>
-            <div className="col-md-6">
+            <div className="col-lg-6 col-portfolio">
               <Link to="/weather" className="btn btn-light btn-portfolio">
                 <h3>Simple Weather App</h3>
                 <img src={weatherImg} width={`100%`} />
               </Link>
             </div>
+          </div>
+          <div className="row portfolio-row">
+            <div className="col-lg-6 col-portfolio">
+              <Link to="/wiki-viewer" className="btn btn-light btn-portfolio">
+                <h3>Wikipedia Viewer</h3>
+                <img src={wikiImg} width={`100%`} />
+              </Link>
+            </div>
+            <div className="col-lg-6 col-portfolio"></div>
           </div>
         </div>
       </div>
