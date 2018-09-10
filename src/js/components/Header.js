@@ -9,18 +9,18 @@ class Header extends Component {
 
   renderLinks() {
     return (
-      <div className="ml-auto">
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#links" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+      [
+        <button key="toggle-botton" className="navbar-toggler" type="button" data-toggle="collapse" data-target="#links" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
-        </button> 
-        <div className="collapse navbar-collapse" id="links">
+        </button>,
+        <div key="nav-links" className="collapse navbar-collapse" id="links">
           <div className="navbar-nav ml-auto">
             <Link to="/quotes" className="nav-item nav-link">Quote Generator</Link>
             <Link to="/weather" className="nav-item nav-link">Weather App</Link>
             <Link to="/wiki-viewer" className="nav-item nav-link">Wiki Viewer</Link>
           </div>
         </div>
-      </div>
+      ]
     );
   }
 
